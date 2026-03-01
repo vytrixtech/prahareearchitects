@@ -1,0 +1,232 @@
+/* Contact Page Styles */
+
+.contact-page {
+    background-color: var(--bg-color);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+}
+
+/* Contact Info left side */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info h2 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.contact-intro {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition-normal);
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-color: transparent;
+}
+
+.info-icon {
+    background-color: var(--light-grey);
+    color: var(--accent);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: var(--transition-normal);
+}
+
+.info-card:hover .info-icon {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.info-details h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--primary);
+}
+
+.info-details p,
+.info-details a {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-decoration: none;
+    transition: var(--transition-normal);
+}
+
+.info-details a:hover {
+    color: var(--accent);
+}
+
+/* Contact Form Right Side */
+.contact-form-wrapper {
+    perspective: 1000px;
+}
+
+.contact-form {
+    padding: 50px 40px;
+    border-radius: 4px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-color);
+}
+
+.form-title {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--light-grey);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    transition: var(--transition-normal);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    background-color: var(--white);
+    box-shadow: 0 0 0 3px rgba(194, 168, 125, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-submit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 18px;
+    font-size: 1rem;
+}
+
+.form-submit:hover {
+    background-color: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+/* Map Section */
+.map-section {
+    width: 100%;
+    height: 450px;
+    display: block;
+}
+
+.map-section iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    filter: grayscale(100%) contrast(1.2) opacity(0.8);
+    transition: filter 0.5s ease;
+}
+
+.map-section iframe:hover {
+    filter: grayscale(0%) contrast(1) opacity(1);
+}
+
+/* bg white utility */
+.bg-white {
+    background-color: var(--white);
+}
+
+.ms-2 {
+    margin-left: 8px;
+}
+
+/* Form Status Message */
+@keyframes slideUpFade {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-status-message {
+    margin-top: 20px;
+    padding: 15px 20px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: center;
+    border: 1px solid transparent;
+    animation: slideUpFade 0.4s ease forwards;
+}
+
+.form-status-message.success {
+    background-color: #f0fdf4;
+    color: #166534;
+    border-color: #bbf7d0;
+}
+
+.form-status-message.error {
+    background-color: #fef2f2;
+    color: #991b1b;
+    border-color: #fecaca;
+}
+
+.form-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
