@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Building2, Compass, PenTool, Home as HomeIcon, CheckCircle, ArrowRight } from 'lucide-react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
+import ImageLoader from '../components/ImageLoader';
 import './Home.css';
 
 const Home = () => {
@@ -40,14 +41,14 @@ const Home = () => {
                             <Link to="/about" className="link-button mt-4">Read our story <ArrowRight size={18} /></Link>
                         </div>
                         <div className="intro-image-container fade-in" style={{ transitionDelay: '0.2s' }}>
-                            <img
+                            <ImageLoader
                                 src="/images/bg_projects.jpg"
                                 alt="Modern Architecture Building"
                                 className="intro-image"
                                 loading="lazy"
                             />
                             <div className="experience-badge">
-                                <span className="years">10+</span>
+                                <span className="years">4+</span>
                                 <span className="text">Years of<br />Excellence</span>
                             </div>
                         </div>

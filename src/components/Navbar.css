@@ -153,3 +153,66 @@
 .mobile-nav-links li a.active {
     color: var(--accent);
 }
+
+/* Phone Link Styles */
+.nav-phone-desktop {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .nav-phone-desktop {
+        display: block;
+    }
+}
+
+.nav-phone-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--white);
+    background-color: var(--accent);
+    padding: 8px 16px;
+    border-radius: 50px;
+    transition: var(--transition-normal);
+}
+
+.nav-phone-link:hover {
+    background-color: #555;
+    color: var(--white);
+}
+
+.navbar.scrolled .nav-phone-link {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.navbar.scrolled .nav-phone-link:hover {
+    background-color: var(--accent);
+}
+
+.mobile-phone-link-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.mobile-phone-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: var(--font-main);
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    color: var(--white) !important;
+    background-color: var(--primary);
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-transform: none !important;
+}
+
+.mobile-phone-link:hover {
+    background-color: var(--accent);
+}

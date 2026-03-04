@@ -31,6 +31,10 @@ const Footer = () => {
                     <h4 className="footer-heading">Contact Us</h4>
                     <ul>
                         <li>
+                            <Phone size={18} />
+                            <a href="tel:+919493280722">+91 94932 80722</a>
+                        </li>
+                        <li>
                             <Mail size={18} />
                             <a href="mailto:prahareearchitects@gmail.com">prahareearchitects@gmail.com</a>
                         </li>

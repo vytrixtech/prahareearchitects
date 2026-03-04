@@ -1,5 +1,6 @@
 import { Users, Target, Leaf, ArrowRight } from 'lucide-react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
+import ImageLoader from '../components/ImageLoader';
 import './About.css';
 
 const About = () => {
@@ -22,7 +23,7 @@ const About = () => {
                 <div className="container">
                     <div className="overview-grid">
                         <div className="overview-image-wrapper fade-in">
-                            <img
+                            <ImageLoader
                                 src="/images/intro_about.jpg"
                                 alt="Architectural Blueprint and Tools"
                                 className="overview-image"

@@ -1,6 +1,7 @@
 import { ArrowRight, Maximize2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import useScrollAnimation from '../hooks/useScrollAnimation';
+import ImageLoader from '../components/ImageLoader';
 import './Projects.css';
 
 const Projects = () => {
@@ -92,7 +93,7 @@ const Projects = () => {
                                 style={{ transitionDelay: project.delay }}
                             >
                                 <div className="project-image-wrapper">
-                                    <img src={project.image} alt={project.title} className="project-image" loading="lazy" />
+                                    <ImageLoader src={project.image} alt={project.title} className="project-image" loading="lazy" />
                                     <div className="project-overlay">
                                         <div className="project-icon">
                                             <Maximize2 size={24} />

@@ -94,6 +94,16 @@ const Contact = () => {
 
                                 <div className="info-card">
                                     <div className="info-icon">
+                                        <Phone size={24} />
+                                    </div>
+                                    <div className="info-details">
+                                        <h3>Phone Number</h3>
+                                        <a href="tel:+919493280722">+91 94932 80722</a>
+                                    </div>
+                                </div>
+
+                                <div className="info-card">
+                                    <div className="info-icon">
                                         <Mail size={24} />
                                     </div>
                                     <div className="info-details">
